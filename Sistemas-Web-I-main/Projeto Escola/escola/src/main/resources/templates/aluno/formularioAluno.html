@@ -8,9 +8,13 @@
 </head>
 <body>
 
-    <form th:action="@{/alunos/salvar}" method="post" th:object="${aluno}" action="">
-        <input type="text" name="idAluno" th:field="*{nomeAluno}" />
-        <label for="idAluno">Nome:</label>
+    <form th:action="@{/alunos/salvar}" method="post" th:object="${aluno}">
+
+        <input type="hidden" name="idAluno" th:field="*{idAluno}" />
+        <br>
+
+        <input type="text" name="nomeAluno" th:field="*{nomeAluno}" />
+        <label for="nomeAluno">nome:</label>
         <br>
  
         <input type="text" name="telefoneAluno" th:field="*{telefoneAluno}" />
