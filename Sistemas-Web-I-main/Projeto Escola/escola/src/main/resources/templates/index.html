@@ -9,18 +9,32 @@
     <link rel="stylesheet" href="../static/css/style.css" />
 </head>
 
-<header>
-    <div class="container-fluid bg-dark text-center text-primary">
-        <div class="row justify-content-center color-white">
-            <h1>Sistema Escola</h1>
-        </div>
+<body class="d-flex flex-column min-vh-100">
+    <header class="bg-dark text-light py-4 shadow">
+         <div class="container text-center">
+      <h1 class="fw-bold">Sistema Escolar</h1>
+      <p class="mb-0 text-secondary">Painel de gerenciamento</p>
     </div>
-</header>
-<body>
+    </header>
     
-    <div class="container bg-dark p-5 mt-5 text-center ">
-        <h3><a href="/alunos/listar">gerenciar Alunos</a></h3>
-        <h3><a href="/cursos/listar">gerenciar cursos</a></h3>
+  <main class="container my-5 flex-grow-1">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <div class="card bg-secondary text-light shadow-lg p-4 rounded-4">
+          <h3 class="mb-4">Menu Principal</h3>
+          <a href="/alunos/listar" class="btn btn-outline-light btn-lg w-100 mb-3 rounded-pill">
+            Gerenciar Alunos
+          </a>
+          <a href="/cursos/listar" class="btn btn-outline-light btn-lg w-100 rounded-pill">
+            Gerenciar Cursos
+          </a>
+        </div>
+      </div>
     </div>
+  </main>
+
+  <footer class="bg-dark text-center text-secondary py-3 mt-auto">
+    <small>&copy; 2025 Sistema Escolar</small>
+  </footer>
 </body>
 </html>

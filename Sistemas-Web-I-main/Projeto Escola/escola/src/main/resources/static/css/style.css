@@ -1,3 +1,23 @@
 body {
-    background-color: rgb(46, 45, 45);
+  background-color: #1c1c1c; /* fundo mais escuro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+}
+
+h1, h3 {
+  letter-spacing: 1px;
+}
+
+.card {
+  background-color: #2a2a2a !important; /* fundo do card mais escuro */
+  border: none;
+}
+
+a.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
