@@ -37,7 +37,7 @@ public class CursoController {
     //Método para abrir o formulário de curso
     @GetMapping("/criar")
     public String criarForm(Model model) {
-        model.addAttribute("aluno", new Curso());
+        model.addAttribute("curso", new Curso());
         return "curso/formularioCurso";
     }
     
