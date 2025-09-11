@@ -1,5 +1,5 @@
 body {
-  background-color: #1c1c1c; /* fundo mais escuro */
+  background-color: #1c1c1c; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #f0f0f0;
 }
@@ -9,7 +9,7 @@ h1, h3 {
 }
 
 .card {
-  background-color: #2a2a2a !important; /* fundo do card mais escuro */
+  background-color: #2a2a2a !important; 
   border: none;
 }
 

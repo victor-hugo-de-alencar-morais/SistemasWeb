@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar curso</title>
+</head>
+<body>
+
+    <body>
+        <h1 style="text-align: center;">Lista de Cursos</h1>
+        <h3 style="text-align: center;"><a href="/cursos/criar">cadastrar</a></h3>
+    
+        <!-- Tabela para exibir os alunos dastrados -->
+        <table style="margin:0 auto; border: 1px solid black; border-collapse: collapse;">
+            <tr>
+                <td colspan="8" style="text-align: center;">Lista de cursos</td>
+            </tr>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sigla</th>
+                <th>CH</th>
+                <th>PERIODO</th>
+                <th colspan="2">Ações</th>
+            </tr>
+    
+            <tr th:each="curso: ${cursos}">
+                <td th:text="${curso.idCurso}"></td>
+                <td th:text="${curso.nomeCurso}"></td>
+                <td th:text="${curso.siglaCurso}"></td>
+                <td th:text="${curso.chCurso}"></td>
+                <td th:text="${curso.periodoCurso}"></td>
+                <td>
+                    <a href="@{/curso/editar{id}(id=${curso.idCurso})}">editar</a>
+                    <a href="@{/curso/excluir{id}(id=${curso.idCurso})}">excluir</a>
+                </td>
+    
+            </tr>
+        </table>
+    
+</body>
+</html>
