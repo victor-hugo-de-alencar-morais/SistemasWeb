@@ -4,47 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Alunos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
-    <title>Listar aluno</title>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 bg-dark text-light">
+
     
-        <header class="bg-dark text-light py-4 shadow">
-             <div class="container text-center">
-          <h1 class="fw-bold">Lista de alunos</h1>
+    <header class="bg-dark text-light py-4 shadow">
+        <div class="container text-center">
+            <h1 class="fw-bold">Lista de Alunos</h1>
         </div>
-        </header>
+    </header>
 
-    <h3 style="text-align: center;"><a href="/alunos/criar">cadastrar</a></h3>
+    
+    <div class="container my-4">
+        <h3 class="text-center">
+            <a href="/alunos/criar" class="btn btn-success btn-lg rounded-pill">Cadastrar Novo Aluno</a>
+        </h3>
+    </div>
 
-    <table style="margin:0 auto; border: 1px solid black; border-collapse: collapse;">
-        <tr>
-            <td colspan="8" style="text-align: center;">Lista de Alunos</td>
-        </tr>
-        <tr>
-            <th>#</th>
-            <th>Nome</th>
-            <th>Endereço</th>
-            <th>Telefone</th>
-            <th>RM</th>
-            <th>CPF</th>
-            <th colspan="2">Ações</th>
-        </tr>
 
-        <tr th:each="aluno: ${alunos}">
-            <td th:text="${aluno.idAluno}"></td>
-            <td th:text="${aluno.nomeAluno}"></td>
-            <td th:text="${aluno.enderecoAluno}"></td>
-            <td th:text="${aluno.telefoneAluno}"></td>
-            <td th:text="${aluno.rmAluno}"></td>
-            <td th:text="${aluno.cpfAluno}"></td>
-            <td>
-                <a href="@{/aluno/editar{id}(id=${aluno.idAluno})}">editar</a>
-                <a href="@{/aluno/excluir{id}(id=${aluno.idAluno})}">excluir</a>
-            </td>
+    <div class="container my-5">
+        <div class="table-responsive">
+            <table class="table table-dark table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>RM</th>
+                        <th>CPF</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="aluno : ${alunos}">
+                        <td th:text="${aluno.idAluno}"></td>
+                        <td th:text="${aluno.nomeAluno}"></td>
+                        <td th:text="${aluno.enderecoAluno}"></td>
+                        <td th:text="${aluno.telefoneAluno}"></td>
+                        <td th:text="${aluno.rmAluno}"></td>
+                        <td th:text="${aluno.cpfAluno}"></td>
+                        <td>
+                            <a th:href="@{/alunos/editar/{id}(id=${aluno.idAluno})}" class="btn btn-warning btn-sm rounded-pill">Editar</a>
+                            <a th:href="@{/alunos/excluir/{id}(id=${aluno.idAluno})}" class="btn btn-danger btn-sm rounded-pill">Excluir</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-        </tr>
-    </table>
+    <div class="container text-center mb-5">
+        <a href="/" class="btn btn-primary btn-lg rounded-pill">Voltar</a>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqL0NckVdeVJ5qS/jtuwFSiDi/YUzzWkhT2G+86Vp6Ffi" crossorigin="anonymous"></script>
 </body>
 </html>
