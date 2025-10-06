@@ -46,6 +46,15 @@
           </div>
 
           <div class="mb-3">
+            <label for="idCurso" class="form-label">Curso:</label>
+                   <select th:field="*{curso}" class="form-control bg-secondary text-light border-0">
+                     <option th:each="curso : ${cursos}" 
+                             th:text="${curso.nomeCurso}"
+                             th:value="${curso.idCurso}"/>
+                   </select>
+          </div>
+
+          <div class="mb-3">
             <label for="rmAluno" class="form-label">RM</label>
             <input type="text" id="rmAluno" class="form-control bg-secondary text-light border-0"
                    th:field="*{rmAluno}" />

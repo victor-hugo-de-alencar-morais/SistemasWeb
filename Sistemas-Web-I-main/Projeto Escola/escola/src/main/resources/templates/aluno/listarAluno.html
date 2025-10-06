@@ -35,6 +35,7 @@
                         <th>Telefone</th>
                         <th>RM</th>
                         <th>CPF</th>
+                        <th>Curso</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -46,6 +47,7 @@
                         <td th:text="${aluno.telefoneAluno}"></td>
                         <td th:text="${aluno.rmAluno}"></td>
                         <td th:text="${aluno.cpfAluno}"></td>
+                        <td th:text="${aluno.curso.nomeCurso}"></td>
                         <td>
                             <a th:href="@{/alunos/editar/{id}(id=${aluno.idAluno})}" class="btn btn-warning btn-sm rounded-pill">Editar</a>
                             <a th:href="@{/alunos/excluir/{id}(id=${aluno.idAluno})}" class="btn btn-danger btn-sm rounded-pill">Excluir</a>
