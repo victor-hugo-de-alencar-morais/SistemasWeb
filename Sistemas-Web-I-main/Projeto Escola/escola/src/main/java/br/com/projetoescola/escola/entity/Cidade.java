@@ -27,16 +27,19 @@ public class Cidade {
     }
 
     // Setters and Getters
-    public Integer getIdCurso() {
+    public Integer getIdCidade() {
         return idCidade;
     }
 
-    public void setIdCurso(Integer idCidade) {
+    public void setIdCidade(Integer idCidade) {
         this.idCidade = idCidade;
     }
 
-    public String getNomeCurso() {
+    public String getNomeCidade() {
         return nomeCidade;
+    }
+    public void setNomeCidade(String nomeCidade) {
+        this.nomeCidade = nomeCidade;
     }
 }
 

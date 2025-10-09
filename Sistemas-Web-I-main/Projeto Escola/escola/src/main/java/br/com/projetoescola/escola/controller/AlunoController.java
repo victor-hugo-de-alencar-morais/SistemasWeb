@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.projetoescola.escola.Service.AlunoService;
+import br.com.projetoescola.escola.Service.CidadeService;
 import br.com.projetoescola.escola.Service.CursoService;
 import br.com.projetoescola.escola.entity.Aluno;
+import br.com.projetoescola.escola.entity.Cidade;
 import br.com.projetoescola.escola.entity.Curso;
 
 @Controller
@@ -25,6 +27,8 @@ public class AlunoController {
     private AlunoService alunoService;
 
     @Autowired CursoService cursoService;
+
+    @Autowired CidadeService cidadeService;
  
     //Método para salvar um aluno
     @PostMapping("/salvar")
@@ -45,7 +49,10 @@ public class AlunoController {
         model.addAttribute("aluno", new Aluno());
         List<Curso> cursos = cursoService.findAll();
         model.addAttribute("cursos", cursos);
+        List<Cidade> cidades = cidadeService.findAll();
+        model.addAttribute("cidades", cidades);
         return "aluno/formularioAluno";
+      
     }
 
     //metodo para excluir um aluno 
@@ -62,6 +69,8 @@ public class AlunoController {
         model.addAttribute("aluno", aluno);
         List<Curso> cursos = cursoService.findAll();
         model.addAttribute("cursos", cursos);
+        List<Cidade> cidades = cidadeService.findAll();
+        model.addAttribute("cidades", cidades);
         return "aluno/formularioAluno";
     }
    
