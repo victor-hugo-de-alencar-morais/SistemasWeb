@@ -56,10 +56,10 @@
 
           <div class="mb-3">
             <label for="idCidade" class="form-label">Cidade:</label>
-                   <select th:field="*{cidade}" class="form-control bg-secondary text-light border-0">
-                     <option th:each="cidade : ${cidades}" 
-                             th:text="${cidade.nomeCidade}"
-                             th:value="${cidade.idCidade}"></option>
+                   <select th:field="*{cidade.idCidade}" class="form-control bg-secondary text-light border-0">
+                    <option th:each="cidade : ${cidades}" 
+          th:text="${cidade.nomeCidade}"
+          th:value="${cidade.idCidade}"></option>
                    </select>
           </div>
 
