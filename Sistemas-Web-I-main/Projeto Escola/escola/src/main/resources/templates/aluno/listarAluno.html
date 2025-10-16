@@ -42,8 +42,8 @@
                 </thead>
                 <tbody>
                     <tr th:each="aluno : ${alunos}">
-                        <td th:text="${aluno.idAluno}"></td>
-                        <td th:text="${aluno.nomeAluno}"></td>
+                        <td th:text="${aluno.idPessoa}"></td>
+                        <td th:text="${aluno.nomePessoa}"></td>
                         <td th:text="${aluno.enderecoAluno}"></td>
                         <td th:text="${aluno.telefoneAluno}"></td>
                         <td th:text="${aluno.rmAluno}"></td>
@@ -51,8 +51,8 @@
                         <td th:text="${aluno.curso.nomeCurso}"></td>
                         <td th:text="${aluno.cidade.nomeCidade}"></td>
                         <td>
-                            <a th:href="@{/alunos/editar/{id}(id=${aluno.idAluno})}" class="btn btn-warning btn-sm rounded-pill">Editar</a>
-                            <a th:href="@{/alunos/excluir/{id}(id=${aluno.idAluno})}" class="btn btn-danger btn-sm rounded-pill">Excluir</a>
+                            <a th:href="@{/alunos/editar/{id}(id=${aluno.idPessoa})}" class="btn btn-warning btn-sm rounded-pill">Editar</a>
+                            <a th:href="@{/alunos/excluir/{id}(id=${aluno.idPessoa})}" class="btn btn-danger btn-sm rounded-pill">Excluir</a>
                         </td>
                     </tr>
                 </tbody>

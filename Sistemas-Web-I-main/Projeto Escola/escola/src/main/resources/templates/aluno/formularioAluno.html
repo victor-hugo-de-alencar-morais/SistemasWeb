@@ -19,12 +19,12 @@
         <h3 class="mb-4 text-center">Cadastro de Aluno</h3>
 
         <form th:action="@{/alunos/salvar}" method="post" th:object="${aluno}">
-          <input type="hidden" th:field="*{idAluno}" />
+          <input type="hidden" th:field="*{idPessoa}" />
 
           <div class="mb-3">
-            <label for="nomeAluno" class="form-label">Nome</label>
-            <input type="text" id="nomeAluno" class="form-control bg-secondary text-light border-0"
-                   th:field="*{nomeAluno}" required />
+            <label for="nomePessoa" class="form-label">Nome</label>
+            <input type="text" id="nomePessoa" class="form-control bg-secondary text-light border-0"
+                   th:field="*{nomePessoa}" required />
           </div>
 
           <div class="mb-3">
