@@ -14,9 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import br.com.projetoescola.escola.Service.AlunoService;
 import br.com.projetoescola.escola.Service.CidadeService;
 import br.com.projetoescola.escola.Service.CursoService;
+import br.com.projetoescola.escola.dto.AlunoTelefone;
 import br.com.projetoescola.escola.entity.Aluno;
 import br.com.projetoescola.escola.entity.Cidade;
 import br.com.projetoescola.escola.entity.Curso;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 @RequestMapping("/alunos")
@@ -73,5 +76,13 @@ public class AlunoController {
         model.addAttribute("cidades", cidades);
         return "aluno/formularioAluno";
     }
+
+    @GetMapping("/listar-nome-telefone")
+    public String listarNomeTelefone(Model model) {
+        List<AlunoTelefone> alunos = alunoService.buscarNomeTelefone();
+        model.addAttribute("alunos", alunos);
+        return "aluno/listarNomeTelefone";
+    }
+    
    
 }
