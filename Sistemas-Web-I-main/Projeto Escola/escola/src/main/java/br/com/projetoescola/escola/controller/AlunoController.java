@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import br.com.projetoescola.escola.Service.AlunoService;
 import br.com.projetoescola.escola.Service.CidadeService;
 import br.com.projetoescola.escola.Service.CursoService;
+import br.com.projetoescola.escola.dto.AlunoCurso;
 import br.com.projetoescola.escola.dto.AlunoTelefone;
 import br.com.projetoescola.escola.entity.Aluno;
 import br.com.projetoescola.escola.entity.Cidade;
@@ -82,6 +83,13 @@ public class AlunoController {
         List<AlunoTelefone> alunos = alunoService.buscarNomeTelefone();
         model.addAttribute("alunos", alunos);
         return "aluno/listarNomeTelefone";
+    }
+
+    @GetMapping("/listar-nome-curso")
+    public String listarNomeCurso(Model model) {
+        List<AlunoCurso> alunos = alunoService.buscarNomeCurso();
+        model.addAttribute("alunos", alunos);
+        return "aluno/listarNomeCurso";
     }
     
    

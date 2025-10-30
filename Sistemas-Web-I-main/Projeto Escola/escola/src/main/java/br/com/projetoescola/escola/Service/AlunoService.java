@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.projetoescola.escola.Repository.AlunoRepository;
+import br.com.projetoescola.escola.dto.AlunoCurso;
 import br.com.projetoescola.escola.dto.AlunoTelefone;
 import br.com.projetoescola.escola.entity.Aluno;
 
@@ -38,6 +39,10 @@ public class AlunoService {
  
     public List<AlunoTelefone> buscarNomeTelefone(){
         return alunoRepository.buscarNomeTelefone();
+    }
+
+    public List<AlunoCurso> buscarNomeCurso(){
+        return alunoRepository.buscarNomeCurso();
     }
    
 }
