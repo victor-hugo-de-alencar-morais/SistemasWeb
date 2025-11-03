@@ -19,7 +19,7 @@ import br.com.projetoescola.escola.dto.AlunoTelefone;
 import br.com.projetoescola.escola.entity.Aluno;
 import br.com.projetoescola.escola.entity.Cidade;
 import br.com.projetoescola.escola.entity.Curso;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @Controller
