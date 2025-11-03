@@ -13,6 +13,10 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query("SELECT new br.com.projetoescola.escola.dto.AlunoTelefone(p.nomePessoa, a. telefoneAluno) FROM Aluno a, Pessoa p where p.idPessoa = a.idPessoa") List<AlunoTelefone> buscarNomeTelefone();
 
-    @Query("SELECT new br.com.projetoescola.escola.dto.AlunoCurso(p.nomePessoa, a. cursoAluno) FROM Aluno a, Pessoa p where p.idPessoa = a.idPessoa") List<AlunoCurso> buscarNomeCurso();
+   @Query("SELECT new br.com.projetoescola.escola.dto.AlunoCurso(a.nomePessoa, c.nomeCurso) " +
+       "FROM Aluno a " +
+       "JOIN a.curso c")
+List<AlunoCurso> buscarNomeCurso();
+
    
 }
