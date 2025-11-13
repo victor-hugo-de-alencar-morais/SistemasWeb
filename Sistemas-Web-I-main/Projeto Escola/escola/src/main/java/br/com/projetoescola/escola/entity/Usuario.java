@@ -21,19 +21,18 @@ public class Usuario {
     @GeneratedValue (strategy = GenerationType.AUTO)
     private Integer idUsuario;
     
-    @Column (nullable = false, length = 11)
+    @Column (nullable = false, length = 40)
     private String nomeUsuario;
 
     @Column (nullable = false, length = 30)
     private String loginUsuario;
 
-    @Column (nullable = false, length = 16)
+    @Column (nullable = false, length = 100)
     private String senhaUsuario;
 
     @Column (nullable = false, length = 11)
     private String cpfUsuario;
 
-    @Column (nullable = false, length = 40)
-    private String roleUsuario;
+    private String role = "ROLE_USER";
 
 }

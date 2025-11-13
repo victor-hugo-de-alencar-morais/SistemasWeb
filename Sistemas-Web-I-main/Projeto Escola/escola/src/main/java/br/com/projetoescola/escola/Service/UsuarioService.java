@@ -9,16 +9,16 @@ import br.com.projetoescola.escola.entity.Usuario;
 @Service
 public class UsuarioService {
 
-    // Injeção de dependência do repositório de alunos
+    // Injeção de dependência do repositório de usuarios
     @Autowired
     private UsuarioRepository usuarioRepository;
  
-    //Método para salvar um aluno
+    //Método para salvar um usuario
     public Usuario save(Usuario usuario){
         return usuarioRepository.save(usuario);
     }
 
-    //metodo para buscar o aluno pelo ID
+    //metodo para buscar o usuario pelo ID
     public Usuario findById(Integer id){
         return usuarioRepository.findById(id).orElse(null);
     }

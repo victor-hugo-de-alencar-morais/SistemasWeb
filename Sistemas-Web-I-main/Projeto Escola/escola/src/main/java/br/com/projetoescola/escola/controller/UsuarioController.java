@@ -6,21 +6,24 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.projetoescola.escola.Service.UsuarioService;
 import br.com.projetoescola.escola.entity.Usuario;
 
 @Controller
+@RequestMapping("/usuarios")
 public class UsuarioController {
     
      @Autowired
      private UsuarioService usuarioService;
 
-    //  Exibe o formulário
-    @GetMapping("/formularioUsuario")
-    public String mostrarFormulario(Model model) {
+    //Método para abrir o formulário de usuario
+    @GetMapping("/criar")
+    public String criarForm(Model model) {
         model.addAttribute("usuario", new Usuario());
-        return "formularioUsuario"; // nome do arquivo em templates/
+        return "usuario/formularioUsuario";
+      
     }
     // Salva o usuário
     @PostMapping("/salvar")
