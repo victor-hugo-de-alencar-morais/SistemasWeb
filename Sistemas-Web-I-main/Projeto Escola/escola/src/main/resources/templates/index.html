@@ -10,47 +10,17 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <header class="bg-dark text-light py-4 shadow">
-         <div class="container text-center">
-      <h1 class="fw-bold">Sistema Escolar</h1>
-      <p class="mb-0 text-secondary">Painel de gerenciamento</p>
-    </div>
-    </header>
-    
-  <main class="container my-5 flex-grow-1">
-    <div class="row justify-content-center">
-      <div class="col-md-6 text-center">
-        <div class="card bg-secondary text-light shadow-lg p-4 rounded-4">
-          <h3 class="mb-4">Menu Principal</h3>
-          <a href="/alunos/listar" class="btn btn-outline-light btn-lg w-100 mb-3 rounded-pill">
-            Gerenciar Alunos
-          </a>
-          <a href="/cursos/listar" class="btn btn-outline-light btn-lg w-100 mb-3 rounded-pill">
-            Gerenciar Cursos
-          </a>
+   <h1 style="text-aling:center;">Sistema escolar</h1>
+   <h1 style="text-aling:center;">Sistema academico</h1>
+   <div style="text-align:center;">
+    <form action="/login" method="get" style"display: inline;">
+        <button type="submit">login</button>
+   </div>
 
-          <a href="/usuarios/criar" class="btn btn-outline-light btn-lg w-100 mb-3 rounded-pill">
-            Gerenciar Usuario
-          </a>
+   <div style="text-align:center;">
+    <form action="/usuarios/criar" method="get" style"display: inline;">
+        <button type="submit">cadastra-se</button>
+   </div>
 
-          <a href="/cidades/listar" class="btn btn-outline-light btn-lg w-100 mb-3 rounded-pill">
-            Gerenciar Cidade do aluno
-          </a>
-
-          <a href="/alunos/listar-nome-telefone" class="btn btn-outline-light btn-lg w-100 mb-3 rounded-pill">
-            Listar telefones de alunos
-          </a>
-
-          <a href="/alunos/listar-nome-curso" class="btn btn-outline-light btn-lg w-100 mb-3 rounded-pill">
-            listar curso de alunos
-          </a>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="bg-dark text-center text-secondary py-3 mt-auto">
-    <small>&copy; 2025 Sistema Escolar</small>
-  </footer>
 </body>
 </html>

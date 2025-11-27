@@ -11,10 +11,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
+@NoArgsConstructor 
+@AllArgsConstructor 
+@Getter 
+@Setter 
 public class Usuario {
 
     @Id
@@ -25,10 +25,10 @@ public class Usuario {
     private String nomeUsuario;
 
     @Column (nullable = false, length = 30)
-    private String loginUsuario;
+    private String loginUsuario; 
 
     @Column (nullable = false, length = 100)
-    private String senhaUsuario;
+    private String senhaUsuario; 
 
     @Column (nullable = false, length = 11)
     private String cpfUsuario;
