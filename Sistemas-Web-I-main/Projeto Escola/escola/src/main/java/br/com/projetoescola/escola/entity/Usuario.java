@@ -33,6 +33,7 @@ public class Usuario {
     @Column (nullable = false, length = 11)
     private String cpfUsuario;
 
-    private String role = "ROLE_USER";
+    private String role = "USER";
+
 
 }

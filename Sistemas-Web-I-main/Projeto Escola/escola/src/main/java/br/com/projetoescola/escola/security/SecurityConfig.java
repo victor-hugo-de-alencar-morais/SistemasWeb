@@ -15,6 +15,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf(cs -> cs.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login", "/escola", "/css/**", "/images/**", "/usuarios/criar",
                                 "/usuarios/salvar", "/usuario/formularioUsuario.html")
